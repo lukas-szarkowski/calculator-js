@@ -29,11 +29,17 @@ Calculator.prototype.multiply = function (num1, num2) {
 	this.history.push(mulResult);
 };
 
+Calculator.prototype.divide = function (num1, num2) {
+	let div = num1 / num2;
+	let divResult = `${num1} / ${num2} = ${div}`;
+	this.history.push(divResult);
+};
 
-
-
-
-
+Calculator.prototype.exponetiate = function (num1, num2) {
+	let exp = num1 ** num2;
+	let expResult = `${num1} ^ ${num2} = ${exp}`;
+	this.history.push(expResult);
+};
 
 const calc = new Calculator();
 let action, promptContent, isCorrectAction, number1, number2;
