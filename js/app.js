@@ -51,11 +51,21 @@ do {
 	action = prompt(promptContent);
 	isCorrectAction = calc.isCorrectAction(action);
 	if (isCorrectAction) {
-		number1 = prompt('Podaj liczbę nr 1');
-		number2 = prompt('Podaj liczbę nr 2');
+		number1 = parseInt(prompt('Podaj liczbę nr 1'));
+		number2 = parseInt(prompt('Podaj liczbę nr 2'));
 
-		if (action === '+') {
+		if (isNaN(number1) || isNaN(number2)) {
+			alert('Podaj liczbę z przedziału od 0 do 9!');
+		} else if (action === '+') {
 			calc.add(number1, number2);
+		} else if (action === '-') {
+			calc.subtract(number1, number2);
+		} else if (action === '*') {
+			calc.multiply(number1, number2);
+		} else if (action === '/') {
+			calc.divide(number1, number2);
+		} else if (action === '^') {
+			calc.exponetiate(number1, number2);
 		}
 	}
 } while (calc.isCorrectAction(action));
