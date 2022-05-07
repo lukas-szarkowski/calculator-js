@@ -17,6 +17,24 @@ Calculator.prototype.add = function (num1, num2) {
 	this.history.push(sumResult);
 };
 
+Calculator.prototype.subtract = function (num1, num2) {
+	let sub = num1 - num2;
+	let subResult = `${num1} - ${num2} = ${sub}`;
+	this.history.push(subResult);
+};
+
+Calculator.prototype.multiply = function (num1, num2) {
+	let mul = num1 * num2;
+	let mulResult = `${num1} * ${num2} = ${mul}`;
+	this.history.push(mulResult);
+};
+
+
+
+
+
+
+
 const calc = new Calculator();
 let action, promptContent, isCorrectAction, number1, number2;
 do {
